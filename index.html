@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eternal Drive Classics</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-pale:#F0DFA0;--gold-dark:#8B6914;--black:#080808;--bege:#D4C5A0;--bege-mid:#C8B98A;}
+html,body{width:100%;min-height:100%;overflow-x:hidden;}
+body{background:var(--black);display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:'Cormorant Garamond',serif;}
+.hero-bg{position:fixed;inset:0;background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1800&q=80');background-size:cover;background-position:center;filter:brightness(0.15) saturate(0.4);z-index:0;}
+.gold-left{position:fixed;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--gold) 30%,var(--gold-light) 50%,var(--gold) 70%,transparent);z-index:2;}
+.gold-right{position:fixed;right:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--gold) 30%,var(--gold-light) 50%,var(--gold) 70%,transparent);z-index:2;}
+.container{position:relative;z-index:3;text-align:center;padding:60px 40px;max-width:900px;width:100%;}
+.ornament{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:40px;animation:fadeIn 1.5s ease 0.3s both;}
+.orn-line{width:100px;height:1px;background:linear-gradient(to right,transparent,var(--gold));}
+.orn-line.r{background:linear-gradient(to left,transparent,var(--gold));}
+.orn-gems{color:var(--gold);font-size:11px;letter-spacing:10px;}
+.wordmark{font-size:clamp(2rem,5vw,4rem);font-weight:300;letter-spacing:0.2em;color:#F5F0E8;text-transform:uppercase;margin-bottom:8px;animation:fadeIn 1.5s ease 0.5s both,shimmer 5s ease 2.5s infinite;}
+.wordmark em{font-style:italic;color:var(--gold-light);}
+.tagline{font-size:clamp(0.7rem,1.5vw,0.9rem);font-weight:300;font-style:italic;letter-spacing:0.25em;color:var(--gold-dark);text-transform:uppercase;margin-bottom:56px;animation:fadeIn 1.5s ease 0.7s both;}
+.divider{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:48px;animation:fadeIn 1.5s ease 0.9s both;}
+.div-line{width:120px;height:1px;background:linear-gradient(to right,transparent,var(--gold-dark));}
+.div-line.r{background:linear-gradient(to left,transparent,var(--gold-dark));}
+.div-gem{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+.select-lang-label{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:28px;display:block;animation:fadeIn 1.5s ease 1.1s both;}
+.lang-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;max-width:760px;margin:0 auto;animation:fadeIn 1.5s ease 1.3s both;}
+.lang-btn{display:flex;flex-direction:column;align-items:center;gap:10px;padding:28px 20px;background:rgba(255,255,255,0.03);border:1px solid rgba(201,168,76,0.15);text-decoration:none;transition:all 0.4s;position:relative;overflow:hidden;}
+.lang-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(201,168,76,0.08),transparent);opacity:0;transition:opacity 0.4s;}
+.lang-btn:hover{border-color:var(--gold);}
+.lang-btn:hover::before{opacity:1;}
+.lang-btn:hover .lang-flag{transform:scale(1.1);}
+.lang-btn:hover .lang-name{color:var(--gold-light);}
+.lang-btn:hover .lang-native{color:var(--gold);}
+.lang-flag{font-size:2rem;transition:transform 0.3s;display:block;}
+.lang-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;letter-spacing:0.12em;color:#F5F0E8;transition:color 0.3s;text-transform:uppercase;}
+.lang-native{font-size:11px;letter-spacing:0.1em;color:var(--gold-dark);font-style:italic;transition:color 0.3s;}
+.footer-note{margin-top:48px;font-size:11px;letter-spacing:0.15em;color:rgba(212,197,160,0.3);animation:fadeIn 1.5s ease 1.5s both;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+@keyframes shimmer{0%,100%{text-shadow:0 0 30px rgba(201,168,76,0.1);}50%{text-shadow:0 0 60px rgba(201,168,76,0.35);}}
+@media(max-width:600px){.lang-grid{grid-template-columns:repeat(2,1fr);}.orn-line{width:50px;}}
+</style>
+</head>
+<body>
+<div class="hero-bg"></div>
+<div class="gold-left"></div>
+<div class="gold-right"></div>
+<div class="container">
+  <div class="ornament">
+    <div class="orn-line"></div>
+    <span class="orn-gems">◆ ◆ ◆</span>
+    <div class="orn-line r"></div>
+  </div>
+  <div class="wordmark">Eternal Drive <em>Classics</em></div>
+  <div class="tagline">Collector Automotive Atelier — Est. Italy</div>
+  <div class="divider">
+    <div class="div-line"></div>
+    <div class="div-gem"></div>
+    <div class="div-line r"></div>
+  </div>
+  <span class="select-lang-label">Select your language — Seleziona la lingua — Selecciona tu idioma — 请选择语言</span>
+  <div class="lang-grid">
+    <a href="en/index.html" class="lang-btn">
+      <span class="lang-flag">🇬🇧</span>
+      <span class="lang-name">English</span>
+      <span class="lang-native">English</span>
+    </a>
+    <a href="it/index.html" class="lang-btn">
+      <span class="lang-flag">🇮🇹</span>
+      <span class="lang-name">Italiano</span>
+      <span class="lang-native">Italian</span>
+    </a>
+    <a href="es/index.html" class="lang-btn">
+      <span class="lang-flag">🇪🇸</span>
+      <span class="lang-name">Español</span>
+      <span class="lang-native">Spanish</span>
+    </a>
+    <a href="zh/index.html" class="lang-btn">
+      <span class="lang-flag">🇨🇳</span>
+      <span class="lang-name">中文</span>
+      <span class="lang-native">Chinese</span>
+    </a>
+  </div>
+  <div class="footer-note">eternaldriveclassics.it — All enquiries treated with absolute discretion</div>
+</div>
+</body>
+</html>
