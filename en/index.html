@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eternal Drive Classics — English</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#8B6914;--black:#080808;}
+html,body{width:100%;min-height:100%;overflow-x:hidden;}
+body{background:var(--black);color:#F5F0E8;font-family:'Cormorant Garamond',serif;min-height:100vh;}
+.hero-bg{position:fixed;inset:0;background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1800&q=80');background-size:cover;background-position:center;filter:brightness(0.12) saturate(0.3);z-index:0;}
+.gold-left{position:fixed;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--gold) 30%,var(--gold-light) 50%,var(--gold) 70%,transparent);z-index:2;}
+.gold-right{position:fixed;right:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--gold) 30%,var(--gold-light) 50%,var(--gold) 70%,transparent);z-index:2;}
+header{position:relative;z-index:3;text-align:center;padding:60px 40px 40px;}
+.back{display:inline-block;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dark);text-decoration:none;margin-bottom:32px;transition:color 0.3s;}
+.back:hover{color:var(--gold);}
+.wordmark{font-size:clamp(1.8rem,4vw,3rem);font-weight:300;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:6px;}
+.wordmark em{font-style:italic;color:var(--gold-light);}
+.tagline{font-size:13px;font-weight:300;font-style:italic;letter-spacing:0.2em;color:var(--gold-dark);text-transform:uppercase;}
+.divider{display:flex;align-items:center;justify-content:center;gap:20px;margin:40px auto;max-width:600px;}
+.div-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold-dark));}
+.div-line.r{background:linear-gradient(to left,transparent,var(--gold-dark));}
+.div-gem{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+main{position:relative;z-index:3;max-width:960px;margin:0 auto;padding:0 40px 80px;}
+.section-label{font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:32px;text-align:center;}
+.intro{max-width:680px;margin:0 auto 64px;text-align:center;font-size:1.15rem;font-weight:300;line-height:1.9;color:rgba(245,240,232,0.75);}
+.collections{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:64px;}
+.col-card{background:rgba(255,255,255,0.02);border:1px solid rgba(201,168,76,0.12);padding:40px 28px;text-align:center;transition:all 0.4s;}
+.col-card:hover{border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.04);}
+.col-era{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px;}
+.col-name{font-size:1.4rem;font-weight:300;letter-spacing:0.1em;margin-bottom:16px;}
+.col-desc{font-size:13px;font-weight:300;line-height:1.8;color:rgba(245,240,232,0.55);font-style:italic;}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-bottom:64px;}
+.svc{border:1px solid rgba(201,168,76,0.1);padding:32px 28px;transition:border-color 0.3s;}
+.svc:hover{border-color:rgba(201,168,76,0.3);}
+.svc-title{font-size:1rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;color:#F5F0E8;}
+.svc-desc{font-size:13px;font-weight:300;line-height:1.8;color:rgba(245,240,232,0.5);font-style:italic;}
+.contact-block{max-width:560px;margin:0 auto;text-align:center;border:1px solid rgba(201,168,76,0.15);padding:48px;}
+.contact-block p{font-size:13px;font-weight:300;line-height:1.9;color:rgba(245,240,232,0.6);margin-bottom:28px;font-style:italic;}
+.contact-link{display:inline-block;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);padding-bottom:4px;transition:all 0.3s;}
+.contact-link:hover{color:var(--gold-light);border-color:var(--gold);}
+footer{position:relative;z-index:3;text-align:center;padding:32px;font-size:11px;letter-spacing:0.15em;color:rgba(212,197,160,0.25);}
+@media(max-width:700px){.collections{grid-template-columns:1fr;}.services{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="hero-bg"></div>
+<div class="gold-left"></div>
+<div class="gold-right"></div>
+<header>
+  <a href="../index.html" class="back">← Language Selection</a>
+  <div class="wordmark">Eternal Drive <em>Classics</em></div>
+  <div class="tagline">Collector Automotive Atelier — Est. Italy</div>
+</header>
+<main>
+  <div class="divider"><div class="div-line"></div><div class="div-gem"></div><div class="div-line r"></div></div>
+  <p class="section-label">The Atelier</p>
+  <div class="intro">
+    We are a private atelier dedicated to the world's most distinguished collector automobiles. Each vehicle we represent is selected for its provenance, mechanical integrity, and historical significance. All enquiries are handled with complete discretion.
+  </div>
+  <p class="section-label">Our Collections</p>
+  <div class="collections">
+    <div class="col-card">
+      <div class="col-era">1920 — 1945</div>
+      <div class="col-name">Pre-War Elegance</div>
+      <div class="col-desc">Bugatti, Alfa Romeo, Bentley — motor cars of the golden age, when coachbuilding was an art form.</div>
+    </div>
+    <div class="col-card">
+      <div class="col-era">1950 — 1973</div>
+      <div class="col-name">Golden Era</div>
+      <div class="col-desc">Ferrari, Maserati, Porsche — the definitive decades of Italian and European automotive excellence.</div>
+    </div>
+    <div class="col-card">
+      <div class="col-era">1974 — 1995</div>
+      <div class="col-name">Modern Classics</div>
+      <div class="col-desc">Lamborghini, Aston Martin, Mercedes — icons that defined the late twentieth century.</div>
+    </div>
+  </div>
+  <p class="section-label">Services</p>
+  <div class="services">
+    <div class="svc">
+      <div class="svc-title">Private Acquisition</div>
+      <div class="svc-desc">We source specific vehicles on behalf of discerning collectors worldwide, leveraging a network built over decades.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-title">Discreet Consignment</div>
+      <div class="svc-desc">For those who wish to place their collection in trusted hands, we offer fully confidential consignment services.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-title">Provenance Research</div>
+      <div class="svc-desc">Complete documentation and historical verification for vehicles of significance.</div>
+    </div>
+    <div class="svc">
+      <div class="svc-title">Concours Preparation</div>
+      <div class="svc-desc">Presentation-level preparation in partnership with Italy's finest restoration specialists.</div>
+    </div>
+  </div>
+  <div class="divider"><div class="div-line"></div><div class="div-gem"></div><div class="div-line r"></div></div>
+  <div class="contact-block">
+    <p class="section-label">Private Enquiries</p>
+    <p>We welcome enquiries from serious collectors and estates. All communications are treated with absolute confidence and replied to personally.</p>
+    <a href="mailto:enquiries@eternaldriveclassics.it" class="contact-link">enquiries@eternaldriveclassics.it</a>
+  </div>
+</main>
+<footer>eternaldriveclassics.it — All enquiries treated with absolute discretion</footer>
+</body>
+</html>
